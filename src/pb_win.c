@@ -6,11 +6,11 @@
 
 #include "pb/pb.h"
 
-#include <Windows.h>
+#include <windows.h>
 
-GetConsoleScreenBufferInfo
-  GetConsoleMode
-    SetConsoleMode
-      SetConsoleCursorPosition
+//GetConsoleScreenBufferInfo
+//GetConsoleMode
+//SetConsoleMode
+//SetConsoleCursorPosition
 
 #endif
