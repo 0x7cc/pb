@@ -15,10 +15,6 @@ First, to build a native application, you need to install these dependencies
 - cmake (Cmake required for cross-compilation must be version 3.13 or higher)
 
 ```shell
-cd lib/
-sh download
-sh compile
-cd ..
 mkdir -p build
 cd build
 cmake ..                                                    \
@@ -32,10 +28,6 @@ make
 #### x86_64-w64-mingw32
 
 ```shell
-cd lib/
-sh download
-sh compile-x86_64-w64-mingw32
-cd ..
 mkdir -p build
 cd build
 cmake ..                                                    \
@@ -48,10 +40,6 @@ make
 #### i686-w64-mingw32
 
 ```shell
-cd lib/
-sh download
-sh compile-i686-w64-mingw32
-cd ..
 mkdir -p build
 cd build
 cmake ..                                                    \
