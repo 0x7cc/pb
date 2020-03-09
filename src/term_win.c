@@ -6,6 +6,10 @@
 
 #include "pb/term.h"
 
+void term_init ()
+{
+}
+
 void term_size (TERM_SIZE* size)
 {
 }
