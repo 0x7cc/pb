@@ -2,6 +2,8 @@
 
 cross-platform progress bar on terminal written in C language
 
+[![Build Status](https://dev.azure.com/0x7cc/0x7cc/_apis/build/status/0x7cc.pb?branchName=master)](https://dev.azure.com/0x7cc/0x7cc/_build/latest?definitionId=2&branchName=master)
+
 ## COMPILE
 
 ### NATIVE ON UBUNTU
