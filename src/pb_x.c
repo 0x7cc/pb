@@ -2,7 +2,7 @@
 // Created by 0x7cc on 2020/3/8.
 //
 
-#if __linux__
+#if __linux__ || __APPLE__
 
 #include "pb/pb.h"
 #include "pb/internal/pb.h"
