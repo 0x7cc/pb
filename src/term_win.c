@@ -17,7 +17,7 @@ void term_init ()
     PB_STDOUT = GetStdHandle (STD_OUTPUT_HANDLE);
 }
 
-void term_size (vector2* size)
+void term_window_size (vector2* size)
 {
   CONSOLE_SCREEN_BUFFER_INFO ConsoleScreenBufferInfo = {0};
   GetConsoleScreenBufferInfo (PB_STDOUT, &ConsoleScreenBufferInfo);
@@ -27,18 +27,18 @@ void term_size (vector2* size)
   SetConsoleCursorPosition (PB_STDOUT, ConsoleScreenBufferInfo.dwCursorPosition);
 }
 
-void term_get_cursor_pos (vector2* size)
+void term_get_cursor_pos (vector2* pos)
 {
   CONSOLE_SCREEN_BUFFER_INFO ConsoleScreenBufferInfo = {0};
   GetConsoleScreenBufferInfo (PB_STDOUT, &ConsoleScreenBufferInfo);
 
-  size->x = ConsoleScreenBufferInfo.dwCursorPosition.X;
-  size->y = ConsoleScreenBufferInfo.dwCursorPosition.Y;
+  pos->x = ConsoleScreenBufferInfo.dwCursorPosition.X;
+  pos->y = ConsoleScreenBufferInfo.dwCursorPosition.Y;
 }
 
-void term_set_cursor_pos (const vector2* size)
+void term_set_cursor_pos (const vector2* pos)
 {
-  COORD dwCursorPosition = {size->x, size->y};
+  COORD dwCursorPosition = {pos->x, pos->y};
   SetConsoleCursorPosition (PB_STDOUT, dwCursorPosition);
 }
 

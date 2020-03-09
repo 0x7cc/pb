@@ -3,6 +3,7 @@
 #define PB_INTERNAL_PB_H
 
 #include "pb/internal/linked_list.h"
+#include "pb/internal/xstring.h"
 
 #include <stdint.h>
 
@@ -12,6 +13,12 @@ struct pb_task_t
 
   uint64_t total;
   uint64_t value;
+  uint8_t  show_percent;
+  uint8_t  show_progress;
+  uint8_t  show_prefix;
+  uint8_t  show_suffix;
+  xstring* prefix;
+  xstring* suffix;
 };
 
 struct pb_t

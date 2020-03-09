@@ -22,12 +22,22 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE ${PROJECT_SOURCE_DIR}/bin/release/)
 ##################################################
 
 add_library(pb
+  include/pb/internal/linked_list.h
+  include/pb/internal/misc.h
+  include/pb/internal/pb.h
+  include/pb/internal/xstring.h
+  include/pb/pb.h
+  include/pb/term.h
+  src/misc.c
+  src/misc_win.c
+  src/misc_x.c
   src/pb.c
   src/pb_win.c
   src/pb_x.c
   src/term.c
   src/term_win.c
   src/term_x.c
+  src/xstring.c
 )
 
 target_include_directories(
@@ -39,12 +49,12 @@ target_include_directories(
 
 ##################################################
 
-add_executable(pb1
+add_executable(sample01
   samples/sample01.c
 )
 
 target_link_libraries(
-  pb1
+  sample01
   PUBLIC
 
   pb

@@ -11,6 +11,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <termios.h>
+#include <stdlib.h>
 
 static int tty = 0;
 
@@ -20,7 +21,7 @@ void term_init ()
     tty = open ("/dev/tty", O_RDONLY);
 }
 
-void term_size (vector2* size)
+void term_window_size (vector2* size)
 {
   struct winsize sz = {0};
   if (ioctl (tty, TIOCGWINSZ, &sz) != 0)
@@ -31,12 +32,15 @@ void term_size (vector2* size)
   size->y = sz.ws_row;
 }
 
-void term_get_cursor_pos (vector2* size)
+void term_get_cursor_pos (vector2* pos)
 {
+  pos->x = 0;
+  pos->y = 0;
 }
 
-void term_set_cursor_pos (const vector2* size)
+void term_set_cursor_pos (const vector2* pos)
 {
+  printf ("\033[%dA", abs (pos->y));
 }
 
 void term_lock_stdin ()

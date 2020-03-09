@@ -29,4 +29,8 @@ void pb_task_set_total (ppb_task task, uint64_t total);
 
 void pb_task_set_value (ppb_task task, uint64_t value);
 
+void pb_task_set_prefix (ppb_task task, const char* prefix, uint32_t len);
+
+void pb_task_set_suffix (ppb_task task, const char* suffix, uint32_t len);
+
 #endif // PB_PB_H
