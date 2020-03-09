@@ -20,7 +20,7 @@ void term_init ()
     tty = open ("/dev/tty", O_RDONLY);
 }
 
-void term_size (TERM_SIZE* size)
+void term_size (vector2* size)
 {
   struct winsize sz = {0};
   if (ioctl (tty, TIOCGWINSZ, &sz) != 0)
@@ -29,6 +29,14 @@ void term_size (TERM_SIZE* size)
   }
   size->x = sz.ws_col;
   size->y = sz.ws_row;
+}
+
+void term_get_cursor_pos (vector2* size)
+{
+}
+
+void term_set_cursor_pos (const vector2* size)
+{
 }
 
 void term_lock_stdin ()
