@@ -31,6 +31,26 @@ jobs:
       make
     displayName: 'Build pb executable'
 
+- job: macOS_x86_64
+
+  pool:
+    vmImage: 'macOS-latest'
+
+  steps:
+
+  - script: |
+      export
+    displayName: 'Show Environments'
+
+  - script: |
+      mkdir -p build
+      cd build
+      cmake ..                                                    \
+        -DCMAKE_BUILD_TYPE=Release                                \
+        -D_0x7cc_sys_root=~/9fd7ba62-9402-4862-ae42-116ea2924339/
+      make
+    displayName: 'Build pb executable'
+
 - job: windows_x86_64
 
   pool:
