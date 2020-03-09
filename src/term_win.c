@@ -49,7 +49,7 @@ void term_lock_stdin ()
 
   GetConsoleMode (PB_STDOUT, &ConsoleMode);
 
-  ConsoleMode &= ~( ENABLE_LINE_INPUT | ENABLE_ECHO_INPUT | ENABLE_WINDOW_INPUT);
+  ConsoleMode &= ~(ENABLE_LINE_INPUT | ENABLE_ECHO_INPUT | ENABLE_WINDOW_INPUT);
 
   SetConsoleMode (PB_STDOUT, ConsoleMode);
 
@@ -65,7 +65,7 @@ void term_unlock_stdin ()
 
   GetConsoleMode (PB_STDOUT, &ConsoleMode);
 
-  ConsoleMode |= ( ENABLE_LINE_INPUT | ENABLE_ECHO_INPUT | ENABLE_WINDOW_INPUT);
+  ConsoleMode |= (ENABLE_LINE_INPUT | ENABLE_ECHO_INPUT | ENABLE_WINDOW_INPUT);
 
   SetConsoleMode (PB_STDOUT, ConsoleMode);
 

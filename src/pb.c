@@ -9,7 +9,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-
 ppb pb_new ()
 {
   ppb pb    = (ppb)calloc (1, sizeof (struct pb_t));

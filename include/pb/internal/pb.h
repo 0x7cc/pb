@@ -2,7 +2,7 @@
 #ifndef PB_INTERNAL_PB_H
 #define PB_INTERNAL_PB_H
 
-#include "pb/linked_list.h"
+#include "pb/internal/linked_list.h"
 
 #include <stdint.h>
 
@@ -23,4 +23,3 @@ struct pb_t
 };
 
 #endif
-

@@ -5,7 +5,11 @@
 #if __linux__
 
 #include "pb/pb.h"
+#include "pb/internal/pb.h"
+#include "pb/term.h"
 
+#include <stdlib.h>
+#include <stdio.h>
 
 void pb_update (ppb pb)
 {
@@ -34,6 +38,5 @@ void pb_update (ppb pb)
 
   free (buf);
 }
-
 
 #endif
