@@ -1,4 +1,4 @@
-# BILIBILI
+# pb
 
 cross-platform progress bar on terminal written in C language
 
