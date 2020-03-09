@@ -112,13 +112,13 @@ ppb_task pb_task_new ()
 
 void pb_task_delete (ppb_task task)
 {
-  free (task);
-
   if (task->prefix)
     xstring_delete (task->prefix);
 
   if (task->suffix)
     xstring_delete (task->suffix);
+
+  free (task);
 }
 
 void pb_task_set_total (ppb_task task, uint64_t total)
