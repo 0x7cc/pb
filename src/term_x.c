@@ -41,18 +41,18 @@ void term_set_cursor_pos (const vector2* size)
 
 void term_lock_stdin ()
 {
-  //  struct termios io = {0};
-  //  ioctl (tty, TCGETS, &io);
-  //  struct termios io2 = io;
-  //  io2.c_lflag &= ~ECHO;
-  //  io2.c_lflag |= ICANON | ISIG;
-  //  io2.c_iflag |= ICRNL;
-  //  ioctl (tty, TCSETS, &io2);
-  //  ioctl(0, TCSETS, 0);
+  struct termios io = {0};
+  tcgetattr (STDIN_FILENO, &io);
+  io.c_lflag &= ~ECHO;
+  tcsetattr (STDIN_FILENO, TCSANOW, &io);
 }
 
 void term_unlock_stdin ()
 {
+  struct termios io = {0};
+  tcgetattr (STDIN_FILENO, &io);
+  io.c_lflag |= ECHO;
+  tcsetattr (STDIN_FILENO, TCSANOW, &io);
 }
 
 #endif
