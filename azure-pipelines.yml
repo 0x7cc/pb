@@ -1,0 +1,82 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+trigger:
+- master
+
+jobs:
+
+- job: ubuntu_x86_64
+
+  pool:
+    vmImage: 'ubuntu-18.04'
+
+  steps:
+
+  - script: |
+      export
+    displayName: 'Show Environments'
+
+  - script: |
+      sudo apt install -y build-essential
+    displayName: 'Install compiler'
+
+  - script: |
+      mkdir -p build
+      cd build
+      cmake ..                                                    \
+        -DCMAKE_BUILD_TYPE=Release                                \
+        -D_0x7cc_sys_root=~/9fd7ba62-9402-4862-ae42-116ea2924339/
+      make
+    displayName: 'Build pb executable'
+
+- job: windows_x86_64
+
+  pool:
+    vmImage: 'ubuntu-18.04'
+
+  steps:
+
+  - script: |
+      export
+    displayName: 'Show Environments'
+
+  - script: |
+      sudo apt install -y build-essential mingw-w64
+    displayName: 'Install compiler'
+
+  - script: |
+      mkdir -p build
+      cd build
+      cmake ..                                                    \
+        -DCMAKE_BUILD_TYPE=Release                                \
+        -DCMAKE_TOOLCHAIN_FILE=x86_64-w64-mingw32.cmake           \
+        -D_0x7cc_sys_root=~/fb23dec8-eff2-40e6-a614-733da8194d02/
+      make
+    displayName: 'Build pb executable'
+
+- job: windows_i686
+
+  pool:
+    vmImage: 'ubuntu-18.04'
+
+  steps:
+
+  - script: |
+      export
+    displayName: 'Show Environments'
+
+  - script: |
+      sudo apt install -y build-essential mingw-w64
+    displayName: 'Install compiler'
+
+  - script: |
+      mkdir -p build
+      cd build
+      cmake ..                                                    \
+        -DCMAKE_BUILD_TYPE=Release                                \
+        -DCMAKE_TOOLCHAIN_FILE=i686-w64-mingw32.cmake             \
+        -D_0x7cc_sys_root=~/8a36e0b5-27a1-4eff-9f4d-ee4cc0975948/
+      make
+    displayName: 'Build pb executable'
