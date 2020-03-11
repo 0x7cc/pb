@@ -4,6 +4,8 @@ cmake_minimum_required(VERSION 3.13)
 project(pb)
 set(CMAKE_CXX_STANDARD 11)
 
+include(GNUInstallDirs)
+
 if ( NOT _0x7cc_sys_root )
   message(FATAL_ERROR "_0x7cc_sys_root not set.")
 endif()
@@ -46,6 +48,9 @@ target_include_directories(
 
   ${CMAKE_CURRENT_LIST_DIR}/include/
 )
+
+install(TARGETS pb DESTINATION ${CMAKE_INSTALL_LIBDIR})
+install(DIRECTORY "${CMAKE_CURRENT_LIST_DIR}/include/pb"  DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
 
 ##################################################
 
