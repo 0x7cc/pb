@@ -28,6 +28,7 @@ add_library(pb
   include/pb/internal/misc.h
   include/pb/internal/pb.h
   include/pb/internal/xstring.h
+  include/pb/native.h
   include/pb/pb.h
   include/pb/term.h
   src/misc.c

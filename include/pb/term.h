@@ -5,6 +5,8 @@
 #ifndef PB_TERM_H
 #define PB_TERM_H
 
+#include "pb/native.h"
+
 #include <stdint.h>
 
 typedef struct
@@ -28,16 +30,16 @@ typedef struct
   int16_t w;
 } vector4;
 
-void term_init ();
+PB_PUBLIC void term_init ();
 
-void term_window_size (vector2* size);
+PB_PUBLIC void term_window_size (vector2* size);
 
-void term_get_cursor_pos (vector2* size);
+PB_PUBLIC void term_get_cursor_pos (vector2* size);
 
-void term_set_cursor_pos (const vector2* size);
+PB_PUBLIC void term_set_cursor_pos (const vector2* size);
 
-void term_lock_stdin ();
+PB_PUBLIC void term_lock_stdin ();
 
-void term_unlock_stdin ();
+PB_PUBLIC void term_unlock_stdin ();
 
 #endif //PB_TERM_H
