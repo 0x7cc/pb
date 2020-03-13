@@ -3,10 +3,10 @@
 //
 
 #include "pb/pb.h"
-#include "pb/internal/pb.h"
-#include "pb/internal/misc.h"
-#include "pb/internal/xstring.h"
 #include "pb/term.h"
+#include "internal/pb.h"
+#include "internal/misc.h"
+#include "internal/xstring.h"
 
 #include <stdlib.h>
 #include <stdio.h>

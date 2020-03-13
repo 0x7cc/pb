@@ -4,7 +4,7 @@
 
 #include <pb/pb.h>
 #include <pb/term.h>
-#include <pb/internal/misc.h>
+#include <internal/misc.h>
 
 #include <stdio.h>
 

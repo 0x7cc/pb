@@ -2,8 +2,8 @@
 // Created by x7cc on 2020/3/9.
 //
 
-#include "pb/internal/xstring.h"
-#include "pb/internal/misc.h"
+#include "internal/xstring.h"
+#include "internal/misc.h"
 
 #include <stdlib.h>
 #include <memory.h>

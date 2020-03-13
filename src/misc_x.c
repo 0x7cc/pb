@@ -4,7 +4,7 @@
 
 #if __linux__ || __APPLE__
 
-#include "pb/internal/misc.h"
+#include "internal/misc.h"
 
 #include <unistd.h>
 

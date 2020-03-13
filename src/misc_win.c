@@ -2,9 +2,9 @@
 // Created by x7cc on 2020/3/9.
 //
 
-#include "pb/internal/misc.h"
-
 #if WIN32
+
+#include "internal/misc.h"
 
 #include <windows.h>
 

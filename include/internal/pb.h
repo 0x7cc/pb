@@ -2,8 +2,8 @@
 #ifndef PB_INTERNAL_PB_H
 #define PB_INTERNAL_PB_H
 
-#include "pb/internal/linked_list.h"
-#include "pb/internal/xstring.h"
+#include "linked_list.h"
+#include "xstring.h"
 
 #include <stdint.h>
 
