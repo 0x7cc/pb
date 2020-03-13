@@ -31,6 +31,7 @@ add_library ( pb
   include/pb/native.h
   include/pb/pb.h
   include/pb/term.h
+  include/pb/vector.h
   src/misc.c
   src/misc_win.c
   src/misc_x.c

@@ -6,29 +6,7 @@
 #define PB_TERM_H
 
 #include "pb/native.h"
-
-#include <stdint.h>
-
-typedef struct
-{
-  int16_t x;
-  int16_t y;
-} vector2;
-
-typedef struct
-{
-  int16_t x;
-  int16_t y;
-  int16_t z;
-} vector3;
-
-typedef struct
-{
-  int16_t x;
-  int16_t y;
-  int16_t z;
-  int16_t w;
-} vector4;
+#include "pb/vector.h"
 
 PB_PUBLIC void term_init ();
 
